@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/register.css">
+    <title>회원가입 - 15ya</title>
+</head>
+<body>
+    <div class="register_container">
+        <div class="register_container">
+            <div class="register_wrap">
+                <div><img id="regi_logo" src="../static/img/logo.png" alt=""></div>
+                <div id="regi_text_area"><span id="regi_text">친구들의 사진과 동영상을 보려면 가입하세요.</span></div>
+                <div class="regi_input">
+                    <input type="text" id="email" name="email" autocomplete="off" required>
+                    <label for="email">휴대폰번호 또는 이메일</label>
+                </div>
+                <div class="regi_input">
+                    <input type="text" id="name" name="name" autocomplete="off" required>
+                    <label for="name">성명</label>
+                </div>
+                <div class="regi_input">
+                    <input type="text" id="nickname" name="nickname" autocomplete="off" required>
+                    <label for="nickname">사용자 이름</label>
+                </div>
+                <div class="regi_input">
+                    <input type="password" id="pw" name="pw" autocomplete="off" required>
+                    <label for="pw">비밀번호</label>
+                </div>
+                <button onclick="register()" id="register_btn">가입</button>
+                
+            </div>
+            <div class="register_regi_wrap">
+                <p>계정이 있으신가요?      <a href="/login">로그인</a></p>
+            </div>
+        </div>
+
+    </div>
+<script src="../static/register.js"></script>
+</body>
+</html>

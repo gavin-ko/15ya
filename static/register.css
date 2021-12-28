@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+body .register_container {
+  width: 935px;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+}
+
+.register_container {
+  width: 350px;
+  height: 606px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.register_container .register_wrap {
+  width: 350px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  border-radius: 1px;
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  padding: 10px 0;
+}
+
+.register_container .register_regi_wrap {
+  width: 350px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  border-radius: 1px;
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  padding: 10px 0;
+  margin-top: 15px;
+}
+
+.register_regi_wrap p {
+  font-size: 14px;
+}
+
+.register_regi_wrap a {
+  color: #0095f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register_wrap #regi_logo {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 60px;
+}
+
+.register_wrap #regi_text_area {
+  width: 250px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#regi_text_area #regi_text {
+  color: #8e8e8e;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.register_wrap .regi_input {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 5px 0 5px 0;
+}
+
+.regi_input input {
+  width: 250px;
+  height: 20px;
+  background: #fafafa;
+  flex: 1 0 auto;
+  overflow: hidden;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 9px 0 7px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  cursor: text;
+}
+
+.regi_input input:focus {
+  outline: none;
+}
+
+.regi_input label {
+  color: #8e8e8e;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  transition: all 0.1s ease;
+  cursor: text;
+}
+
+.regi_input a::before {
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  font-size: 12px;
+}
+
+.regi_input input:valid + label {
+  top: 0;
+  font-size: 10px;
+  left: 8px;
+  margin-top: 5px;
+}
+
+.regi_input input:valid {
+  padding: 12px 0 4px 8px;
+}
+
+.regi_input input:valid + .regi_input a::after {
+  color: red;
+}
+
+.register_wrap #register_btn {
+  width: 260px;
+  height: 30px;
+  background-color: #0095f6;
+  position: relative;
+  color: #fff;
+  border: 0;
+  left: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#register_btn:focus {
+  outline: none;
+  border: 0;
+}
