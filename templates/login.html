@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- cookie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/login.css">
+    
+    <title>로그인 - 15ya</title>
+</head>
+<body>
+    <div class="login_container">
+        <div class="login_left_wrap">
+            <img id=""src="https://www.instagram.com/static/images/homepage/home-phones@2x.png/9364675fb26a.png" alt="">
+            <div class="login_left_in_img"><img id="login_img" src="../static/img/login_img.jpeg" alt=""></div>
+        </div>
+        <div class="login_right_container">
+            <div class="login_right_wrap">
+                <div><img id="right_logo" src="../static/img/logo.png" alt=""></div>
+                <div class="right_input">
+                    <input type="text" id="email" name="email" autocomplete="off" required>
+                    <label for="email">휴대폰번호 또는 이메일</label>
+                </div>
+                <div class="right_input">
+                    <input type="password" id="pw" name="pw" autocomplete="off" required>
+                    <label for="pw">비밀번호</label>
+                </div>
+                <button onclick="login()" id="login_btn">로그인</button>
+                
+            </div>
+            <div class="login_right_regi_wrap">
+                <p>계정이 없으신가요?      <a href="/register">가입하기</a></p>
+            </div>
+        </div>
+
+    </div>
+<script src="../static/login.js"></script>
+<script>
+    {% if msg %}
+        alert("{{ msg }}")
+    {% endif %}
+</script>
+</body>
+</html>
+
+
