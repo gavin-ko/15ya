@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/feed.css">
+    <title>feed_upload - 15ya</title>
+</head>
+<body>
+        <img src="../static/icons/add.PNG" class="icon" alt="" id="feed_upload">
+        <div class="modal_container" id="modal-container">            
+            <div class="modal_close">
+                <img src="../static/icons/close.png" alt="" id="modal_close_">    
+            </div>
+            <div class="modal_background">
+                <div class="modal_wrap">
+                    <label>　</label>
+                    <div class="modal_wrap_header">
+                        <p>　</p>
+                        <p>새 게시물 만들기</p>
+                        <span id="modal_next"> 다음　</span>
+                        <span id="modal_upload"> 올리기 </span>
+                    </div>
+                    <div class="modal_wrap_content_wrap">
+                        <img id="modal_content_image" src="../static/icons/imagegallery.png" alt="">
+                        <h2>사진을 여기에 끌어다 놓으세요</h2>
+                    </div>
+                    <div class="modal_wrap_write_wrap">
+                        <div class="modal_wrap_write_content_left">
+                        </div>
+                        <div class="modal_wrap_write_content_right">
+                            <div class="write_header">
+                                <img src="../static/profile/default.jpeg" alt="">
+                                <p> 사용자 </p>
+                            </div>
+                            <textarea name="" id="write_content" cols="30" rows="10" placeholder="문구 입력..."></textarea>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% for feed in feeds %}
+        <div class="feed_box">
+                        <div style="display: flex; flex-direction: row; align-items: center; margin-left: 16px;">
+                            <div class="box" style="background: grey; margin:10px 0;">
+                                <img class="profile" src="{{ feed.profile_image }}">
+                            </div>
+                            <div>
+                                <div style="font-weight: bold; margin-left: 8px; font-size: 12px;">
+                                    {{ feed.author }}
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img style="width: 100%;" src="{{ feed.image }}">
+                        </div>
+                        <div style="margin:15px 10px 0px 16px; display: flex; flex-direction: row; justify-content: space-between;">
+                            <div>
+                                <span class="material-icons-outlined">favorite_border</span>
+                                <span class="material-icons-round">chat_bubble</span>
+                                <span class="material-icons-round">send</span>
+                            </div>
+                            <div>
+                                <span class="material-icons-round">bookmark_border</span>                            
+                            </div>
+                        </div>
+                        <div style="margin:0 20px; text-align: left; font-size: 14px;"> 춘식이 <b>외 {{ feed.like_count }}명</b>이 좋아합니다. </div>
+                        <div style="margin:0 20px; text-align: left; font-size: 16px;"> <b>{{ feed.author }}</b> {{ feed.content }}</div>
+                        <div style="margin:0 20px; text-align: left; font-size: 13px;"> <b>aaa111</b> 제주도 </div>
+                        <div style="margin:0 20px; text-align: left; font-size: 13px;"> <b>bbb111</b> 제주도 2 </div>
+                        <div style="margin:0 20px; text-align: left; font-size: 13px;"> <b>ccc111</b> 제주도 3 </div>
+                        <div style="border-top: solid grey 1px">
+                            <input type="text" class="form-control" style="box-shadow: none; border:none; outline: none;" id="exampleFormControlInput1" placeholder="댓글달기">
+                        </div>
+                        <button onclick="feed_delete({{ feed.index }})" id="feed_delete">삭제</button>
+                    </div>
+                {% endfor %}
+    
+<script src="../static/feed.js"></script>
+</body>
+</html>
